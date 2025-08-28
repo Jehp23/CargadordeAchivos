@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verificar Imagen</title>
+  <link rel="stylesheet" href="file.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Verificar Imagen</h1>
+    <p class="subtitle">Carga, previsualiza, edita títulos y reemplaza/borrá imágenes.</p>
+  </header>
+
+  <main>
+    <section id="cajaformulario" class="card">
+      <form name="formulario" id="formulario" onsubmit="return false;">
+        <label for="archivos" class="label-file">Seleccionar archivos</label>
+        <input type="file" name="archivos" id="archivos" multiple accept="image/*" />
+        <p class="hint">Formatos: JPG, PNG, GIF, WEBP. Límite de ejemplo: 5 MB por archivo.</p>
+        <div class="actions">
+          <button id="btn-limpiar" type="button" class="btn ghost">Limpiar todo</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="cajadatos" class="card">
+      <h2>Resultados</h2>
+      <div id="resultados" class="grid">
+        <p class="placeholder">No se seleccionaron archivos</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="ArchivoImagen.js" defer></script>
+</body>
+</html>
